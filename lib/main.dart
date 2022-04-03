@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:netflixapp/presentation/main_page/screen_mainpage.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:netflixapp/application/downloads/bloc/bloc/downloads_bloc.dart';
 
-void main() {
+import 'domain/core/di/injectable.dart';
+import 'presentation/main_page/screen_mainpage.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureInjection();
   runApp(const MyApp());
 }
 
@@ -11,18 +17,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-            appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent),
-            // fontFamily: GoogleFonts.montserrat().fontFamily,
-            scaffoldBackgroundColor: Colors.black,
-            primarySwatch: Colors.blue,
-            backgroundColor: Colors.black,
-            textTheme: const TextTheme(
-                bodyText1: TextStyle(color: Colors.white),
-                bodyText2: TextStyle(color: Colors.white))),
-        home: ScreenMainPage());
+    return MultiBlocProvider(
+      providers: [BlocProvider(create: (ctx) => getIt<DownloadsBloc>())],
+      child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+              appBarTheme:
+                  const AppBarTheme(backgroundColor: Colors.transparent),
+              // fontFamily: GoogleFonts.montserrat().fontFamily,
+              scaffoldBackgroundColor: Colors.black,
+              primarySwatch: Colors.blue,
+              backgroundColor: Colors.black,
+              textTheme: const TextTheme(
+                  bodyText1: TextStyle(color: Colors.white),
+                  bodyText2: TextStyle(color: Colors.white))),
+          home: ScreenMainPage()),
+    );
   }
 }

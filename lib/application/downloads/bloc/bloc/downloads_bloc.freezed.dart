@@ -185,7 +185,8 @@ class _$DownloadsStateTearOff {
   _DownloadsState call(
       {required bool isLoading,
       List<Downloads>? downloads,
-      required dynamic downloadsFailureOrSuccessOption}) {
+      required Option<Either<MainFailure, List<Downloads>>>
+          downloadsFailureOrSuccessOption}) {
     return _DownloadsState(
       isLoading: isLoading,
       downloads: downloads,
@@ -201,8 +202,8 @@ const $DownloadsState = _$DownloadsStateTearOff();
 mixin _$DownloadsState {
   bool get isLoading => throw _privateConstructorUsedError;
   List<Downloads>? get downloads => throw _privateConstructorUsedError;
-  dynamic get downloadsFailureOrSuccessOption =>
-      throw _privateConstructorUsedError;
+  Option<Either<MainFailure, List<Downloads>>>
+      get downloadsFailureOrSuccessOption => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DownloadsStateCopyWith<DownloadsState> get copyWith =>
@@ -217,7 +218,8 @@ abstract class $DownloadsStateCopyWith<$Res> {
   $Res call(
       {bool isLoading,
       List<Downloads>? downloads,
-      dynamic downloadsFailureOrSuccessOption});
+      Option<Either<MainFailure, List<Downloads>>>
+          downloadsFailureOrSuccessOption});
 }
 
 /// @nodoc
@@ -248,7 +250,7 @@ class _$DownloadsStateCopyWithImpl<$Res>
               freezed
           ? _value.downloadsFailureOrSuccessOption
           : downloadsFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as Option<Either<MainFailure, List<Downloads>>>,
     ));
   }
 }
@@ -263,7 +265,8 @@ abstract class _$DownloadsStateCopyWith<$Res>
   $Res call(
       {bool isLoading,
       List<Downloads>? downloads,
-      dynamic downloadsFailureOrSuccessOption});
+      Option<Either<MainFailure, List<Downloads>>>
+          downloadsFailureOrSuccessOption});
 }
 
 /// @nodoc
@@ -292,10 +295,11 @@ class __$DownloadsStateCopyWithImpl<$Res>
           ? _value.downloads
           : downloads // ignore: cast_nullable_to_non_nullable
               as List<Downloads>?,
-      downloadsFailureOrSuccessOption:
-          downloadsFailureOrSuccessOption == freezed
-              ? _value.downloadsFailureOrSuccessOption
-              : downloadsFailureOrSuccessOption,
+      downloadsFailureOrSuccessOption: downloadsFailureOrSuccessOption ==
+              freezed
+          ? _value.downloadsFailureOrSuccessOption
+          : downloadsFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<MainFailure, List<Downloads>>>,
     ));
   }
 }
@@ -313,7 +317,8 @@ class _$_DownloadsState implements _DownloadsState {
   @override
   final List<Downloads>? downloads;
   @override
-  final dynamic downloadsFailureOrSuccessOption;
+  final Option<Either<MainFailure, List<Downloads>>>
+      downloadsFailureOrSuccessOption;
 
   @override
   String toString() {
@@ -349,14 +354,16 @@ abstract class _DownloadsState implements DownloadsState {
   const factory _DownloadsState(
       {required bool isLoading,
       List<Downloads>? downloads,
-      required dynamic downloadsFailureOrSuccessOption}) = _$_DownloadsState;
+      required Option<Either<MainFailure, List<Downloads>>>
+          downloadsFailureOrSuccessOption}) = _$_DownloadsState;
 
   @override
   bool get isLoading;
   @override
   List<Downloads>? get downloads;
   @override
-  dynamic get downloadsFailureOrSuccessOption;
+  Option<Either<MainFailure, List<Downloads>>>
+      get downloadsFailureOrSuccessOption;
   @override
   @JsonKey(ignore: true)
   _$DownloadsStateCopyWith<_DownloadsState> get copyWith =>

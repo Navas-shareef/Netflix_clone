@@ -6,3 +6,5 @@ const kwidth = SizedBox(
 const khieght = SizedBox(
   height: 10,
 );
+
+const imageAppendUrl = 'https://image.tmdb.org/t/p/w500';
