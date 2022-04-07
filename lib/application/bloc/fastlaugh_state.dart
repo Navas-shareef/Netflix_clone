@@ -7,6 +7,9 @@ class FastlaughState with _$FastlaughState {
     required bool isLoading,
     required bool isError,
   }) = _FastlaughState;
-  factory FastlaughState.initial() =>
-      FastlaughState(vediosList: [], isLoading: true, isError: false);
+  factory FastlaughState.initial() => FastlaughState(
+        vediosList: [],
+        isLoading: true,
+        isError: false,
+      );
 }

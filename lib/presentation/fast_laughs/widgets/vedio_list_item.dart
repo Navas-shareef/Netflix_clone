@@ -71,14 +71,39 @@ class VedioListItem extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: CircleAvatar(
+                    backgroundColor: Colors.grey,
                     radius: 30,
                     backgroundImage: posterPath == null
                         ? null
                         : NetworkImage('$imageAppendUrl$posterPath'),
                   ),
                 ),
-                const VedioActionWidget(
-                    title: 'LOL', icon: Icons.emoji_emotions),
+                ValueListenableBuilder(
+                  valueListenable: likedVideosIdNotifier,
+                  builder: (BuildContext c, Set<int> newLikedIds, Widget? _) {
+                    final _index = index;
+
+                    if (newLikedIds.contains(_index)) {
+                      return GestureDetector(
+                        onTap: () {
+                          likedVideosIdNotifier.value.remove(_index);
+                          likedVideosIdNotifier.notifyListeners();
+                        },
+                        child: const VedioActionWidget(
+                            title: 'Liked', icon: Icons.favorite_outlined),
+                      );
+                    } else {
+                      return GestureDetector(
+                        onTap: () {
+                          likedVideosIdNotifier.value.add(_index);
+                          likedVideosIdNotifier.notifyListeners();
+                        },
+                        child: const VedioActionWidget(
+                            title: 'LOL', icon: Icons.emoji_emotions),
+                      );
+                    }
+                  },
+                ),
                 const VedioActionWidget(title: 'My List', icon: Icons.add),
                 GestureDetector(
                     onTap: () {
