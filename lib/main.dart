@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflixapp/application/downloads/bloc/bloc/downloads_bloc.dart';
 
+import 'application/bloc/fastlaugh_bloc.dart';
+import 'application/search/search_bloc.dart';
 import 'domain/core/di/injectable.dart';
 import 'presentation/main_page/screen_mainpage.dart';
 
@@ -18,7 +20,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (ctx) => getIt<DownloadsBloc>())],
+      providers: [
+        BlocProvider(create: (ctx) => getIt<DownloadsBloc>()),
+        BlocProvider(create: (ctx) => getIt<SearchBloc>()),
+        BlocProvider(create: (ctx) => getIt<FastlaughBloc>())
+      ],
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
