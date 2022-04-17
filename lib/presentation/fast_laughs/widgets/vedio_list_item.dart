@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflixapp/application/bloc/fastlaugh_bloc.dart';
+import 'package:netflixapp/application/fastlaugh/fastlaugh_bloc.dart';
 import 'package:netflixapp/core/constant.dart';
 import 'package:netflixapp/domain/downloads/models/downloads.dart';
 import 'package:share_plus/share_plus.dart';

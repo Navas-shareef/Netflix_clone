@@ -27,7 +27,10 @@ class EveryoneWatchingWidget extends StatelessWidget {
         const SizedBox(
           height: 30,
         ),
-        const VedeoWidget(),
+        VedeoWidget(
+          url:
+              "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202107/KGF-647x363.jpeg?0n7lFSoZP63T_VGoHMpIkMtOu9s6Jq_Z",
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: const [

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:netflixapp/application/downloads/bloc/bloc/downloads_bloc.dart';
 
-import 'application/bloc/fastlaugh_bloc.dart';
+import 'application/fastlaugh/fastlaugh_bloc.dart';
+import 'application/hot_and_new_bloc/hotandnew_bloc.dart';
 import 'application/search/search_bloc.dart';
 import 'domain/core/di/injectable.dart';
 import 'presentation/main_page/screen_mainpage.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (ctx) => getIt<DownloadsBloc>()),
         BlocProvider(create: (ctx) => getIt<SearchBloc>()),
-        BlocProvider(create: (ctx) => getIt<FastlaughBloc>())
+        BlocProvider(create: (ctx) => getIt<FastlaughBloc>()),
+        BlocProvider(create: (ctx) => getIt<HotandnewBloc>())
       ],
       child: MaterialApp(
           debugShowCheckedModeBanner: false,

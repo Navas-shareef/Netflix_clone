@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class VedeoWidget extends StatelessWidget {
-  const VedeoWidget({
-    Key? key,
-  }) : super(key: key);
+  String url;
+  VedeoWidget({Key? key, required this.url}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +12,7 @@ class VedeoWidget extends StatelessWidget {
           width: double.infinity,
           height: 200,
           child: Image.network(
-            "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202107/KGF-647x363.jpeg?0n7lFSoZP63T_VGoHMpIkMtOu9s6Jq_Z",
+            url,
             fit: BoxFit.cover,
           ),
         ),

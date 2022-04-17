@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:netflixapp/application/hot_and_new_bloc/hotandnew_bloc.dart';
 import 'package:netflixapp/core/colors.dart';
 import 'package:netflixapp/core/constant.dart';
 
@@ -53,17 +55,11 @@ class ScreenNewAndHot extends StatelessWidget {
               ),
             )),
         body: TabBarView(children: [
-          _buildComingSoon(),
+          ComingSoonLst(),
           _buildEveryOnesWatching(),
         ]),
       ),
     );
-  }
-
-  Widget _buildComingSoon() {
-    return ListView.builder(
-        itemCount: 10,
-        itemBuilder: (BuildContext context, index) => const ComingSoon());
   }
 
   _buildEveryOnesWatching() {
@@ -71,5 +67,50 @@ class ScreenNewAndHot extends StatelessWidget {
         itemCount: 10,
         itemBuilder: (BuildContext context, index) =>
             const EveryoneWatchingWidget());
+  }
+}
+
+class ComingSoonLst extends StatelessWidget {
+  const ComingSoonLst({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      BlocProvider.of<HotandnewBloc>(context).add(const LoadDataComingSoon());
+    });
+    return BlocBuilder<HotandnewBloc, HotandnewState>(
+      builder: (context, state) {
+        if (state.isLoading) {
+          return const Center(
+            child: CircularProgressIndicator(
+              strokeWidth: 2,
+            ),
+          );
+        } else if (state.hasError) {
+          print(state.comingSoonList);
+          return const Center(
+            child: Text('Error ocurred while getting data'),
+          );
+        } else if (state.comingSoonList.isEmpty) {
+          return const Center(
+            child: Text('ComingSoon list is Empty'),
+          );
+        } else {
+          return ListView.builder(
+              itemCount: state.comingSoonList.length,
+              itemBuilder: (BuildContext context, index) {
+                final _movie = state.comingSoonList[index];
+                return ComingSoon(
+                  id: _movie.id.toString(),
+                  month: 'MAR',
+                  day: '11',
+                  posterPath: '$imageAppendUrl${_movie.posterPath}',
+                  movieName: _movie.originalTitle ?? 'No title',
+                  description: _movie.overview ?? 'No Description',
+                );
+              });
+        }
+      },
+    );
   }
 }
