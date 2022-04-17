@@ -39,16 +39,12 @@ class VedeoWidget extends StatelessWidget {
           child: CircleAvatar(
             backgroundColor: Colors.black.withOpacity(0.5),
             radius: 22,
-            child: Row(
-              children: [
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.volume_off,
-                      size: 20,
-                    ))
-              ],
-            ),
+            child: IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.volume_off,
+                  size: 20,
+                )),
           ),
         ),
       ],
