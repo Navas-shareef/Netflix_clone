@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
 import 'package:netflixapp/application/hot_and_new_bloc/hotandnew_bloc.dart';
 import 'package:netflixapp/core/colors.dart';
 import 'package:netflixapp/core/constant.dart';
@@ -100,10 +101,28 @@ class ComingSoonLst extends StatelessWidget {
               itemCount: state.comingSoonList.length,
               itemBuilder: (BuildContext context, index) {
                 final _movie = state.comingSoonList[index];
+                print(_movie.releaseDate);
+                String month = '';
+                String day = '';
+                try {
+                  final _date = DateTime.parse(_movie.releaseDate!);
+                  final formattedDate =
+                      DateFormat.yMMMMd('en-US').format(_date);
+                  month = formattedDate
+                      .split(' ')
+                      .first
+                      .substring(0, 3)
+                      .toUpperCase();
+                  day = _movie.releaseDate!.split('-')[1];
+                } catch (_) {
+                  month = ' ';
+                  day = ' ';
+                }
+
                 return ComingSoon(
                   id: _movie.id.toString(),
-                  month: 'MAR',
-                  day: '11',
+                  month: month,
+                  day: day,
                   posterPath: '$imageAppendUrl${_movie.posterPath}',
                   movieName: _movie.originalTitle ?? 'No title',
                   description: _movie.overview ?? 'No Description',
