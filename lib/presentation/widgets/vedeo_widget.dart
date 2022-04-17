@@ -14,6 +14,23 @@ class VedeoWidget extends StatelessWidget {
           child: Image.network(
             url,
             fit: BoxFit.cover,
+            loadingBuilder:
+                (BuildContext _, Widget child, ImageChunkEvent? progress) {
+              if (progress == null) {
+                return child;
+              } else {
+                return const Center(
+                  child: CircularProgressIndicator(
+                    strokeWidth: 2,
+                  ),
+                );
+              }
+            },
+            errorBuilder: (BuildContext, Object, StackTrace? trace) {
+              return const Center(
+                child: Icon(Icons.wifi, color: Colors.white),
+              );
+            },
           ),
         ),
         Positioned(

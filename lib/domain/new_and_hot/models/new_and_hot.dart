@@ -29,6 +29,7 @@ class Results {
   int? id;
   String? originalLanguage;
   String? originalTitle;
+  String? originalName;
   String? overview;
   double? popularity;
   String? posterPath;
@@ -40,6 +41,7 @@ class Results {
     this.id,
     this.originalLanguage,
     this.originalTitle,
+    this.originalName,
     this.overview,
     this.popularity,
     this.posterPath,
@@ -52,6 +54,7 @@ class Results {
     id = json['id'];
     originalLanguage = json['original_language'];
     originalTitle = json['original_title'];
+    originalName = json['original_name'];
     overview = json['overview'];
     popularity = json['popularity'];
     posterPath = json['poster_path'];
@@ -65,6 +68,7 @@ class Results {
     data['id'] = this.id;
     data['original_language'] = this.originalLanguage;
     data['original_title'] = this.originalTitle;
+    data['original_name'] = this.originalName;
     data['overview'] = this.overview;
     data['popularity'] = this.popularity;
     data['poster_path'] = this.posterPath;

@@ -55,19 +55,12 @@ class ScreenNewAndHot extends StatelessWidget {
                 ],
               ),
             )),
-        body: TabBarView(children: [
+        body: const TabBarView(children: [
           ComingSoonLst(),
-          _buildEveryOnesWatching(),
+          EveryoneWatchingList(),
         ]),
       ),
     );
-  }
-
-  _buildEveryOnesWatching() {
-    return ListView.builder(
-        itemCount: 10,
-        itemBuilder: (BuildContext context, index) =>
-            const EveryoneWatchingWidget());
   }
 }
 
@@ -127,6 +120,49 @@ class ComingSoonLst extends StatelessWidget {
                   movieName: _movie.originalTitle ?? 'No title',
                   description: _movie.overview ?? 'No Description',
                 );
+              });
+        }
+      },
+    );
+  }
+}
+
+class EveryoneWatchingList extends StatelessWidget {
+  const EveryoneWatchingList({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      BlocProvider.of<HotandnewBloc>(context)
+          .add(const LoadDataEveryoneIsWatching());
+    });
+    return BlocBuilder<HotandnewBloc, HotandnewState>(
+      builder: (context, state) {
+        if (state.isLoading) {
+          return const Center(
+            child: CircularProgressIndicator(
+              strokeWidth: 2,
+            ),
+          );
+        } else if (state.hasError) {
+          print(state.comingSoonList);
+          return const Center(
+            child: Text('Error ocurred while getting data'),
+          );
+        } else if (state.everyOnesWatchingList.isEmpty) {
+          return const Center(
+            child: Text('EveryOneWatching list is Empty'),
+          );
+        } else {
+          return ListView.builder(
+              itemCount: state.everyOnesWatchingList.length,
+              itemBuilder: (BuildContext context, index) {
+                final _movie = state.everyOnesWatchingList[index];
+
+                return EveryoneWatchingWidget(
+                    posterPath: '$imageAppendUrl${_movie.posterPath}',
+                    movieName: _movie.originalName!,
+                    description: _movie.overview!);
               });
         }
       },

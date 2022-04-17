@@ -40,6 +40,29 @@ class HotandnewBloc extends Bloc<HotandnewEvent, HotandnewState> {
       });
     });
 // get movie data
-    on<LoadDataEveryoneIsWatching>((event, emit) {});
+    on<LoadDataEveryoneIsWatching>((event, emit) async {
+      emit(const HotandnewState(
+          comingSoonList: [],
+          everyOnesWatchingList: [],
+          isLoading: true,
+          hasError: false));
+      final _result = await _hotAndNewService.getHotAndNewData();
+
+      _result.fold((MainFailure failure) {
+        emit(const HotandnewState(
+          comingSoonList: [],
+          everyOnesWatchingList: [],
+          isLoading: false,
+          hasError: true,
+        ));
+      }, (HotAndNewResp resp) {
+        emit(HotandnewState(
+          comingSoonList: state.comingSoonList,
+          everyOnesWatchingList: resp.results!,
+          isLoading: false,
+          hasError: false,
+        ));
+      });
+    });
   }
 }
