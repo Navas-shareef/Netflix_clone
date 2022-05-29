@@ -160,7 +160,7 @@ class _FastLaughVedioPlayerState extends State<FastLaughVedioPlayer> {
   Widget build(BuildContext context) {
     return Container(
         width: double.infinity,
-        height: double.infinity,
+        height: MediaQuery.of(context).size.width,
         child: _vedioPlayerController.value.isInitialized
             ? AspectRatio(
                 aspectRatio: _vedioPlayerController.value.aspectRatio,

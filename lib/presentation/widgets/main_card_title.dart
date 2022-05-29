@@ -5,8 +5,10 @@ import 'package:netflixapp/presentation/widgets/main_title.dart';
 import 'main_card.dart';
 
 class MainCardTitle extends StatelessWidget {
-  const MainCardTitle({Key? key, required this.title}) : super(key: key);
+  const MainCardTitle({Key? key, required this.title, required this.images})
+      : super(key: key);
   final String title;
+  final List<String> images;
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +22,12 @@ class MainCardTitle extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: List.generate(
-                10,
+                images.length,
                 (index) => Padding(
                       padding: const EdgeInsets.only(left: 10),
-                      child: MainCard(),
+                      child: MainCard(
+                        image: images[index].toString(),
+                      ),
                     )),
           ),
         )
@@ -31,4 +35,3 @@ class MainCardTitle extends StatelessWidget {
     );
   }
 }
- 

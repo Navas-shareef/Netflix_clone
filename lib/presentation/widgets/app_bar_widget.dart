@@ -17,11 +17,7 @@ class AppBarWidget extends StatelessWidget {
           color: Colors.white,
         ),
         kwidth,
-        Container(
-          width: 30,
-          height: 30,
-          color: Colors.blue,
-        ),
+        Container(width: 30, height: 30, color: Colors.transparent),
         kwidth,
       ],
     );

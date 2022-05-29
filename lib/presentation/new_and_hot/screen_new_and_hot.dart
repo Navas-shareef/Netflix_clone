@@ -32,7 +32,7 @@ class ScreenNewAndHot extends StatelessWidget {
                 Container(
                   width: 30,
                   height: 30,
-                  color: Colors.blue,
+                  color: Colors.transparent,
                 ),
                 kwidth,
               ],
