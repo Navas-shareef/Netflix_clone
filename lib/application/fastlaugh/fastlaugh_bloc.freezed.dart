@@ -12,31 +12,7 @@ part of 'fastlaugh_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$FastlaughEventTearOff {
-  const _$FastlaughEventTearOff();
-
-  Initial initial() {
-    return Initial();
-  }
-
-  LikedVideo likedVideo({required int id}) {
-    return LikedVideo(
-      id: id,
-    );
-  }
-
-  UnlikedVideo unlikedVideo({required int id}) {
-    return UnlikedVideo(
-      id: id,
-    );
-  }
-}
-
-/// @nodoc
-const $FastlaughEvent = _$FastlaughEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$FastlaughEvent {
@@ -104,19 +80,19 @@ class _$FastlaughEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $InitialCopyWith<$Res> {
-  factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
-      _$InitialCopyWithImpl<$Res>;
+abstract class _$$InitialCopyWith<$Res> {
+  factory _$$InitialCopyWith(_$Initial value, $Res Function(_$Initial) then) =
+      __$$InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res> extends _$FastlaughEventCopyWithImpl<$Res>
-    implements $InitialCopyWith<$Res> {
-  _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
-      : super(_value, (v) => _then(v as Initial));
+class __$$InitialCopyWithImpl<$Res> extends _$FastlaughEventCopyWithImpl<$Res>
+    implements _$$InitialCopyWith<$Res> {
+  __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
+      : super(_value, (v) => _then(v as _$Initial));
 
   @override
-  Initial get _value => super._value as Initial;
+  _$Initial get _value => super._value as _$Initial;
 }
 
 /// @nodoc
@@ -132,7 +108,7 @@ class _$Initial implements Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Initial);
+        (other.runtimeType == runtimeType && other is _$Initial);
   }
 
   @override
@@ -212,27 +188,29 @@ abstract class Initial implements FastlaughEvent {
 }
 
 /// @nodoc
-abstract class $LikedVideoCopyWith<$Res> {
-  factory $LikedVideoCopyWith(
-          LikedVideo value, $Res Function(LikedVideo) then) =
-      _$LikedVideoCopyWithImpl<$Res>;
+abstract class _$$LikedVideoCopyWith<$Res> {
+  factory _$$LikedVideoCopyWith(
+          _$LikedVideo value, $Res Function(_$LikedVideo) then) =
+      __$$LikedVideoCopyWithImpl<$Res>;
   $Res call({int id});
 }
 
 /// @nodoc
-class _$LikedVideoCopyWithImpl<$Res> extends _$FastlaughEventCopyWithImpl<$Res>
-    implements $LikedVideoCopyWith<$Res> {
-  _$LikedVideoCopyWithImpl(LikedVideo _value, $Res Function(LikedVideo) _then)
-      : super(_value, (v) => _then(v as LikedVideo));
+class __$$LikedVideoCopyWithImpl<$Res>
+    extends _$FastlaughEventCopyWithImpl<$Res>
+    implements _$$LikedVideoCopyWith<$Res> {
+  __$$LikedVideoCopyWithImpl(
+      _$LikedVideo _value, $Res Function(_$LikedVideo) _then)
+      : super(_value, (v) => _then(v as _$LikedVideo));
 
   @override
-  LikedVideo get _value => super._value as LikedVideo;
+  _$LikedVideo get _value => super._value as _$LikedVideo;
 
   @override
   $Res call({
     Object? id = freezed,
   }) {
-    return _then(LikedVideo(
+    return _then(_$LikedVideo(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -258,7 +236,7 @@ class _$LikedVideo implements LikedVideo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LikedVideo &&
+            other is _$LikedVideo &&
             const DeepCollectionEquality().equals(other.id, id));
   }
 
@@ -268,8 +246,8 @@ class _$LikedVideo implements LikedVideo {
 
   @JsonKey(ignore: true)
   @override
-  $LikedVideoCopyWith<LikedVideo> get copyWith =>
-      _$LikedVideoCopyWithImpl<LikedVideo>(this, _$identity);
+  _$$LikedVideoCopyWith<_$LikedVideo> get copyWith =>
+      __$$LikedVideoCopyWithImpl<_$LikedVideo>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -341,38 +319,38 @@ class _$LikedVideo implements LikedVideo {
 }
 
 abstract class LikedVideo implements FastlaughEvent {
-  factory LikedVideo({required int id}) = _$LikedVideo;
+  factory LikedVideo({required final int id}) = _$LikedVideo;
 
   int get id;
   @JsonKey(ignore: true)
-  $LikedVideoCopyWith<LikedVideo> get copyWith =>
+  _$$LikedVideoCopyWith<_$LikedVideo> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UnlikedVideoCopyWith<$Res> {
-  factory $UnlikedVideoCopyWith(
-          UnlikedVideo value, $Res Function(UnlikedVideo) then) =
-      _$UnlikedVideoCopyWithImpl<$Res>;
+abstract class _$$UnlikedVideoCopyWith<$Res> {
+  factory _$$UnlikedVideoCopyWith(
+          _$UnlikedVideo value, $Res Function(_$UnlikedVideo) then) =
+      __$$UnlikedVideoCopyWithImpl<$Res>;
   $Res call({int id});
 }
 
 /// @nodoc
-class _$UnlikedVideoCopyWithImpl<$Res>
+class __$$UnlikedVideoCopyWithImpl<$Res>
     extends _$FastlaughEventCopyWithImpl<$Res>
-    implements $UnlikedVideoCopyWith<$Res> {
-  _$UnlikedVideoCopyWithImpl(
-      UnlikedVideo _value, $Res Function(UnlikedVideo) _then)
-      : super(_value, (v) => _then(v as UnlikedVideo));
+    implements _$$UnlikedVideoCopyWith<$Res> {
+  __$$UnlikedVideoCopyWithImpl(
+      _$UnlikedVideo _value, $Res Function(_$UnlikedVideo) _then)
+      : super(_value, (v) => _then(v as _$UnlikedVideo));
 
   @override
-  UnlikedVideo get _value => super._value as UnlikedVideo;
+  _$UnlikedVideo get _value => super._value as _$UnlikedVideo;
 
   @override
   $Res call({
     Object? id = freezed,
   }) {
-    return _then(UnlikedVideo(
+    return _then(_$UnlikedVideo(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -398,7 +376,7 @@ class _$UnlikedVideo implements UnlikedVideo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is UnlikedVideo &&
+            other is _$UnlikedVideo &&
             const DeepCollectionEquality().equals(other.id, id));
   }
 
@@ -408,8 +386,8 @@ class _$UnlikedVideo implements UnlikedVideo {
 
   @JsonKey(ignore: true)
   @override
-  $UnlikedVideoCopyWith<UnlikedVideo> get copyWith =>
-      _$UnlikedVideoCopyWithImpl<UnlikedVideo>(this, _$identity);
+  _$$UnlikedVideoCopyWith<_$UnlikedVideo> get copyWith =>
+      __$$UnlikedVideoCopyWithImpl<_$UnlikedVideo>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -481,32 +459,13 @@ class _$UnlikedVideo implements UnlikedVideo {
 }
 
 abstract class UnlikedVideo implements FastlaughEvent {
-  factory UnlikedVideo({required int id}) = _$UnlikedVideo;
+  factory UnlikedVideo({required final int id}) = _$UnlikedVideo;
 
   int get id;
   @JsonKey(ignore: true)
-  $UnlikedVideoCopyWith<UnlikedVideo> get copyWith =>
+  _$$UnlikedVideoCopyWith<_$UnlikedVideo> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$FastlaughStateTearOff {
-  const _$FastlaughStateTearOff();
-
-  _FastlaughState call(
-      {required List<Downloads> vediosList,
-      required bool isLoading,
-      required bool isError}) {
-    return _FastlaughState(
-      vediosList: vediosList,
-      isLoading: isLoading,
-      isError: isError,
-    );
-  }
-}
-
-/// @nodoc
-const $FastlaughState = _$FastlaughStateTearOff();
 
 /// @nodoc
 mixin _$FastlaughState {
@@ -560,25 +519,25 @@ class _$FastlaughStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$FastlaughStateCopyWith<$Res>
+abstract class _$$_FastlaughStateCopyWith<$Res>
     implements $FastlaughStateCopyWith<$Res> {
-  factory _$FastlaughStateCopyWith(
-          _FastlaughState value, $Res Function(_FastlaughState) then) =
-      __$FastlaughStateCopyWithImpl<$Res>;
+  factory _$$_FastlaughStateCopyWith(
+          _$_FastlaughState value, $Res Function(_$_FastlaughState) then) =
+      __$$_FastlaughStateCopyWithImpl<$Res>;
   @override
   $Res call({List<Downloads> vediosList, bool isLoading, bool isError});
 }
 
 /// @nodoc
-class __$FastlaughStateCopyWithImpl<$Res>
+class __$$_FastlaughStateCopyWithImpl<$Res>
     extends _$FastlaughStateCopyWithImpl<$Res>
-    implements _$FastlaughStateCopyWith<$Res> {
-  __$FastlaughStateCopyWithImpl(
-      _FastlaughState _value, $Res Function(_FastlaughState) _then)
-      : super(_value, (v) => _then(v as _FastlaughState));
+    implements _$$_FastlaughStateCopyWith<$Res> {
+  __$$_FastlaughStateCopyWithImpl(
+      _$_FastlaughState _value, $Res Function(_$_FastlaughState) _then)
+      : super(_value, (v) => _then(v as _$_FastlaughState));
 
   @override
-  _FastlaughState get _value => super._value as _FastlaughState;
+  _$_FastlaughState get _value => super._value as _$_FastlaughState;
 
   @override
   $Res call({
@@ -586,9 +545,9 @@ class __$FastlaughStateCopyWithImpl<$Res>
     Object? isLoading = freezed,
     Object? isError = freezed,
   }) {
-    return _then(_FastlaughState(
+    return _then(_$_FastlaughState(
       vediosList: vediosList == freezed
-          ? _value.vediosList
+          ? _value._vediosList
           : vediosList // ignore: cast_nullable_to_non_nullable
               as List<Downloads>,
       isLoading: isLoading == freezed
@@ -607,12 +566,18 @@ class __$FastlaughStateCopyWithImpl<$Res>
 
 class _$_FastlaughState implements _FastlaughState {
   const _$_FastlaughState(
-      {required this.vediosList,
+      {required final List<Downloads> vediosList,
       required this.isLoading,
-      required this.isError});
+      required this.isError})
+      : _vediosList = vediosList;
 
+  final List<Downloads> _vediosList;
   @override
-  final List<Downloads> vediosList;
+  List<Downloads> get vediosList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_vediosList);
+  }
+
   @override
   final bool isLoading;
   @override
@@ -627,9 +592,9 @@ class _$_FastlaughState implements _FastlaughState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FastlaughState &&
+            other is _$_FastlaughState &&
             const DeepCollectionEquality()
-                .equals(other.vediosList, vediosList) &&
+                .equals(other._vediosList, _vediosList) &&
             const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
             const DeepCollectionEquality().equals(other.isError, isError));
   }
@@ -637,21 +602,21 @@ class _$_FastlaughState implements _FastlaughState {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(vediosList),
+      const DeepCollectionEquality().hash(_vediosList),
       const DeepCollectionEquality().hash(isLoading),
       const DeepCollectionEquality().hash(isError));
 
   @JsonKey(ignore: true)
   @override
-  _$FastlaughStateCopyWith<_FastlaughState> get copyWith =>
-      __$FastlaughStateCopyWithImpl<_FastlaughState>(this, _$identity);
+  _$$_FastlaughStateCopyWith<_$_FastlaughState> get copyWith =>
+      __$$_FastlaughStateCopyWithImpl<_$_FastlaughState>(this, _$identity);
 }
 
 abstract class _FastlaughState implements FastlaughState {
   const factory _FastlaughState(
-      {required List<Downloads> vediosList,
-      required bool isLoading,
-      required bool isError}) = _$_FastlaughState;
+      {required final List<Downloads> vediosList,
+      required final bool isLoading,
+      required final bool isError}) = _$_FastlaughState;
 
   @override
   List<Downloads> get vediosList;
@@ -661,6 +626,6 @@ abstract class _FastlaughState implements FastlaughState {
   bool get isError;
   @override
   @JsonKey(ignore: true)
-  _$FastlaughStateCopyWith<_FastlaughState> get copyWith =>
+  _$$_FastlaughStateCopyWith<_$_FastlaughState> get copyWith =>
       throw _privateConstructorUsedError;
 }

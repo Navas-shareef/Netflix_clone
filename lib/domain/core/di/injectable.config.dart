@@ -4,6 +4,7 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
+// ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -22,9 +23,16 @@ import '../../search/models/search_service.dart'
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
-_i1.GetIt $initGetIt(_i1.GetIt get,
-    {String? environment, _i2.EnvironmentFilter? environmentFilter}) {
-  final gh = _i2.GetItHelper(get, environment, environmentFilter);
+_i1.GetIt $initGetIt(
+  _i1.GetIt get, {
+  String? environment,
+  _i2.EnvironmentFilter? environmentFilter,
+}) {
+  final gh = _i2.GetItHelper(
+    get,
+    environment,
+    environmentFilter,
+  );
   gh.lazySingleton<_i3.HotAndNewService>(() => _i4.HotAndNewImplimentation());
   gh.factory<_i5.HotandnewBloc>(
       () => _i5.HotandnewBloc(get<_i3.HotAndNewService>()));
@@ -35,7 +43,9 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.factory<_i11.FastlaughBloc>(
       () => _i11.FastlaughBloc(get<_i6.IDownloadsRepo>()));
   gh.factory<_i12.HomeBloc>(() => _i12.HomeBloc(get<_i3.HotAndNewService>()));
-  gh.factory<_i13.SearchBloc>(() =>
-      _i13.SearchBloc(get<_i8.SearchService>(), get<_i6.IDownloadsRepo>()));
+  gh.factory<_i13.SearchBloc>(() => _i13.SearchBloc(
+        get<_i8.SearchService>(),
+        get<_i6.IDownloadsRepo>(),
+      ));
   return get;
 }

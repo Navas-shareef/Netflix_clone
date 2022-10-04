@@ -12,19 +12,7 @@ part of 'home_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$HomeEventTearOff {
-  const _$HomeEventTearOff();
-
-  GetHomeScreenData getHomeScreenData() {
-    return const GetHomeScreenData();
-  }
-}
-
-/// @nodoc
-const $HomeEvent = _$HomeEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$HomeEvent {
@@ -78,22 +66,22 @@ class _$HomeEventCopyWithImpl<$Res> implements $HomeEventCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $GetHomeScreenDataCopyWith<$Res> {
-  factory $GetHomeScreenDataCopyWith(
-          GetHomeScreenData value, $Res Function(GetHomeScreenData) then) =
-      _$GetHomeScreenDataCopyWithImpl<$Res>;
+abstract class _$$GetHomeScreenDataCopyWith<$Res> {
+  factory _$$GetHomeScreenDataCopyWith(
+          _$GetHomeScreenData value, $Res Function(_$GetHomeScreenData) then) =
+      __$$GetHomeScreenDataCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GetHomeScreenDataCopyWithImpl<$Res>
+class __$$GetHomeScreenDataCopyWithImpl<$Res>
     extends _$HomeEventCopyWithImpl<$Res>
-    implements $GetHomeScreenDataCopyWith<$Res> {
-  _$GetHomeScreenDataCopyWithImpl(
-      GetHomeScreenData _value, $Res Function(GetHomeScreenData) _then)
-      : super(_value, (v) => _then(v as GetHomeScreenData));
+    implements _$$GetHomeScreenDataCopyWith<$Res> {
+  __$$GetHomeScreenDataCopyWithImpl(
+      _$GetHomeScreenData _value, $Res Function(_$GetHomeScreenData) _then)
+      : super(_value, (v) => _then(v as _$GetHomeScreenData));
 
   @override
-  GetHomeScreenData get _value => super._value as GetHomeScreenData;
+  _$GetHomeScreenData get _value => super._value as _$GetHomeScreenData;
 }
 
 /// @nodoc
@@ -109,7 +97,7 @@ class _$GetHomeScreenData implements GetHomeScreenData {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is GetHomeScreenData);
+        (other.runtimeType == runtimeType && other is _$GetHomeScreenData);
   }
 
   @override
@@ -175,33 +163,6 @@ class _$GetHomeScreenData implements GetHomeScreenData {
 abstract class GetHomeScreenData implements HomeEvent {
   const factory GetHomeScreenData() = _$GetHomeScreenData;
 }
-
-/// @nodoc
-class _$HomeStateTearOff {
-  const _$HomeStateTearOff();
-
-  _Initial call(
-      {required List<Results> pastYearMovieList,
-      required List<Results> trendingMovieList,
-      required List<Results> tenseDramasMovieList,
-      required List<Results> southIndianMovieList,
-      required List<Results> trendingTvList,
-      required bool isLoading,
-      required bool hasError}) {
-    return _Initial(
-      pastYearMovieList: pastYearMovieList,
-      trendingMovieList: trendingMovieList,
-      tenseDramasMovieList: tenseDramasMovieList,
-      southIndianMovieList: southIndianMovieList,
-      trendingTvList: trendingTvList,
-      isLoading: isLoading,
-      hasError: hasError,
-    );
-  }
-}
-
-/// @nodoc
-const $HomeState = _$HomeStateTearOff();
 
 /// @nodoc
 mixin _$HomeState {
@@ -284,9 +245,10 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$InitialCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
+abstract class _$$_InitialCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
   @override
   $Res call(
       {List<Results> pastYearMovieList,
@@ -299,13 +261,13 @@ abstract class _$InitialCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
+class __$$_InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+      : super(_value, (v) => _then(v as _$_Initial));
 
   @override
-  _Initial get _value => super._value as _Initial;
+  _$_Initial get _value => super._value as _$_Initial;
 
   @override
   $Res call({
@@ -317,25 +279,25 @@ class __$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
     Object? isLoading = freezed,
     Object? hasError = freezed,
   }) {
-    return _then(_Initial(
+    return _then(_$_Initial(
       pastYearMovieList: pastYearMovieList == freezed
-          ? _value.pastYearMovieList
+          ? _value._pastYearMovieList
           : pastYearMovieList // ignore: cast_nullable_to_non_nullable
               as List<Results>,
       trendingMovieList: trendingMovieList == freezed
-          ? _value.trendingMovieList
+          ? _value._trendingMovieList
           : trendingMovieList // ignore: cast_nullable_to_non_nullable
               as List<Results>,
       tenseDramasMovieList: tenseDramasMovieList == freezed
-          ? _value.tenseDramasMovieList
+          ? _value._tenseDramasMovieList
           : tenseDramasMovieList // ignore: cast_nullable_to_non_nullable
               as List<Results>,
       southIndianMovieList: southIndianMovieList == freezed
-          ? _value.southIndianMovieList
+          ? _value._southIndianMovieList
           : southIndianMovieList // ignore: cast_nullable_to_non_nullable
               as List<Results>,
       trendingTvList: trendingTvList == freezed
-          ? _value.trendingTvList
+          ? _value._trendingTvList
           : trendingTvList // ignore: cast_nullable_to_non_nullable
               as List<Results>,
       isLoading: isLoading == freezed
@@ -354,24 +316,54 @@ class __$InitialCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
 
 class _$_Initial implements _Initial {
   const _$_Initial(
-      {required this.pastYearMovieList,
-      required this.trendingMovieList,
-      required this.tenseDramasMovieList,
-      required this.southIndianMovieList,
-      required this.trendingTvList,
+      {required final List<Results> pastYearMovieList,
+      required final List<Results> trendingMovieList,
+      required final List<Results> tenseDramasMovieList,
+      required final List<Results> southIndianMovieList,
+      required final List<Results> trendingTvList,
       required this.isLoading,
-      required this.hasError});
+      required this.hasError})
+      : _pastYearMovieList = pastYearMovieList,
+        _trendingMovieList = trendingMovieList,
+        _tenseDramasMovieList = tenseDramasMovieList,
+        _southIndianMovieList = southIndianMovieList,
+        _trendingTvList = trendingTvList;
 
+  final List<Results> _pastYearMovieList;
   @override
-  final List<Results> pastYearMovieList;
+  List<Results> get pastYearMovieList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_pastYearMovieList);
+  }
+
+  final List<Results> _trendingMovieList;
   @override
-  final List<Results> trendingMovieList;
+  List<Results> get trendingMovieList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_trendingMovieList);
+  }
+
+  final List<Results> _tenseDramasMovieList;
   @override
-  final List<Results> tenseDramasMovieList;
+  List<Results> get tenseDramasMovieList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_tenseDramasMovieList);
+  }
+
+  final List<Results> _southIndianMovieList;
   @override
-  final List<Results> southIndianMovieList;
+  List<Results> get southIndianMovieList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_southIndianMovieList);
+  }
+
+  final List<Results> _trendingTvList;
   @override
-  final List<Results> trendingTvList;
+  List<Results> get trendingTvList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_trendingTvList);
+  }
+
   @override
   final bool isLoading;
   @override
@@ -386,17 +378,17 @@ class _$_Initial implements _Initial {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Initial &&
+            other is _$_Initial &&
             const DeepCollectionEquality()
-                .equals(other.pastYearMovieList, pastYearMovieList) &&
+                .equals(other._pastYearMovieList, _pastYearMovieList) &&
             const DeepCollectionEquality()
-                .equals(other.trendingMovieList, trendingMovieList) &&
+                .equals(other._trendingMovieList, _trendingMovieList) &&
             const DeepCollectionEquality()
-                .equals(other.tenseDramasMovieList, tenseDramasMovieList) &&
+                .equals(other._tenseDramasMovieList, _tenseDramasMovieList) &&
             const DeepCollectionEquality()
-                .equals(other.southIndianMovieList, southIndianMovieList) &&
+                .equals(other._southIndianMovieList, _southIndianMovieList) &&
             const DeepCollectionEquality()
-                .equals(other.trendingTvList, trendingTvList) &&
+                .equals(other._trendingTvList, _trendingTvList) &&
             const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
             const DeepCollectionEquality().equals(other.hasError, hasError));
   }
@@ -404,29 +396,29 @@ class _$_Initial implements _Initial {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(pastYearMovieList),
-      const DeepCollectionEquality().hash(trendingMovieList),
-      const DeepCollectionEquality().hash(tenseDramasMovieList),
-      const DeepCollectionEquality().hash(southIndianMovieList),
-      const DeepCollectionEquality().hash(trendingTvList),
+      const DeepCollectionEquality().hash(_pastYearMovieList),
+      const DeepCollectionEquality().hash(_trendingMovieList),
+      const DeepCollectionEquality().hash(_tenseDramasMovieList),
+      const DeepCollectionEquality().hash(_southIndianMovieList),
+      const DeepCollectionEquality().hash(_trendingTvList),
       const DeepCollectionEquality().hash(isLoading),
       const DeepCollectionEquality().hash(hasError));
 
   @JsonKey(ignore: true)
   @override
-  _$InitialCopyWith<_Initial> get copyWith =>
-      __$InitialCopyWithImpl<_Initial>(this, _$identity);
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
+      __$$_InitialCopyWithImpl<_$_Initial>(this, _$identity);
 }
 
 abstract class _Initial implements HomeState {
   const factory _Initial(
-      {required List<Results> pastYearMovieList,
-      required List<Results> trendingMovieList,
-      required List<Results> tenseDramasMovieList,
-      required List<Results> southIndianMovieList,
-      required List<Results> trendingTvList,
-      required bool isLoading,
-      required bool hasError}) = _$_Initial;
+      {required final List<Results> pastYearMovieList,
+      required final List<Results> trendingMovieList,
+      required final List<Results> tenseDramasMovieList,
+      required final List<Results> southIndianMovieList,
+      required final List<Results> trendingTvList,
+      required final bool isLoading,
+      required final bool hasError}) = _$_Initial;
 
   @override
   List<Results> get pastYearMovieList;
@@ -444,6 +436,6 @@ abstract class _Initial implements HomeState {
   bool get hasError;
   @override
   @JsonKey(ignore: true)
-  _$InitialCopyWith<_Initial> get copyWith =>
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
       throw _privateConstructorUsedError;
 }

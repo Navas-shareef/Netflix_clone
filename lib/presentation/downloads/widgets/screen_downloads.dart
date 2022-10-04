@@ -76,16 +76,11 @@ class DownloadImageWidget extends StatelessWidget {
 }
 
 class Section2 extends StatelessWidget {
-  Section2({Key? key}) : super(key: key);
-  List<String> _imageList = [
-    'https://m.media-amazon.com/images/I/713+JsN7ZjL._SY550_.jpg',
-    'https://cdn.shopify.com/s/files/1/0969/9128/products/Joker_-_Put_On_A_Happy_Face_-_Joaquin_Phoenix_-_Hollywood_English_Movie_Poster_3_de5e4cfc-cfd4-4732-aad1-271d6bdb1587.jpg?v=1579504979',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1v2iGKW1da2Q7MomGNdk0lZAhajAD2dFFqA&usqp=CAU'
-  ];
+  const Section2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       BlocProvider.of<DownloadsBloc>(context)
           .add(const DownloadEvent.getDownloadsImage());
     });

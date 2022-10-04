@@ -69,7 +69,7 @@ class ComingSoonLst extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       BlocProvider.of<HotandnewBloc>(context).add(const LoadDataComingSoon());
     });
     return RefreshIndicator(
@@ -137,7 +137,7 @@ class EveryoneWatchingList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       BlocProvider.of<HotandnewBloc>(context)
           .add(const LoadDataEveryoneIsWatching());
     });

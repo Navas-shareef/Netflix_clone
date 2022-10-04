@@ -12,23 +12,7 @@ part of 'hotandnew_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$HotandnewEventTearOff {
-  const _$HotandnewEventTearOff();
-
-  LoadDataComingSoon loadDataComingSoon() {
-    return const LoadDataComingSoon();
-  }
-
-  LoadDataEveryoneIsWatching loadDataEveryoneIsWatching() {
-    return const LoadDataEveryoneIsWatching();
-  }
-}
-
-/// @nodoc
-const $HotandnewEvent = _$HotandnewEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$HotandnewEvent {
@@ -93,22 +77,22 @@ class _$HotandnewEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $LoadDataComingSoonCopyWith<$Res> {
-  factory $LoadDataComingSoonCopyWith(
-          LoadDataComingSoon value, $Res Function(LoadDataComingSoon) then) =
-      _$LoadDataComingSoonCopyWithImpl<$Res>;
+abstract class _$$LoadDataComingSoonCopyWith<$Res> {
+  factory _$$LoadDataComingSoonCopyWith(_$LoadDataComingSoon value,
+          $Res Function(_$LoadDataComingSoon) then) =
+      __$$LoadDataComingSoonCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadDataComingSoonCopyWithImpl<$Res>
+class __$$LoadDataComingSoonCopyWithImpl<$Res>
     extends _$HotandnewEventCopyWithImpl<$Res>
-    implements $LoadDataComingSoonCopyWith<$Res> {
-  _$LoadDataComingSoonCopyWithImpl(
-      LoadDataComingSoon _value, $Res Function(LoadDataComingSoon) _then)
-      : super(_value, (v) => _then(v as LoadDataComingSoon));
+    implements _$$LoadDataComingSoonCopyWith<$Res> {
+  __$$LoadDataComingSoonCopyWithImpl(
+      _$LoadDataComingSoon _value, $Res Function(_$LoadDataComingSoon) _then)
+      : super(_value, (v) => _then(v as _$LoadDataComingSoon));
 
   @override
-  LoadDataComingSoon get _value => super._value as LoadDataComingSoon;
+  _$LoadDataComingSoon get _value => super._value as _$LoadDataComingSoon;
 }
 
 /// @nodoc
@@ -124,7 +108,7 @@ class _$LoadDataComingSoon implements LoadDataComingSoon {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is LoadDataComingSoon);
+        (other.runtimeType == runtimeType && other is _$LoadDataComingSoon);
   }
 
   @override
@@ -201,23 +185,25 @@ abstract class LoadDataComingSoon implements HotandnewEvent {
 }
 
 /// @nodoc
-abstract class $LoadDataEveryoneIsWatchingCopyWith<$Res> {
-  factory $LoadDataEveryoneIsWatchingCopyWith(LoadDataEveryoneIsWatching value,
-          $Res Function(LoadDataEveryoneIsWatching) then) =
-      _$LoadDataEveryoneIsWatchingCopyWithImpl<$Res>;
+abstract class _$$LoadDataEveryoneIsWatchingCopyWith<$Res> {
+  factory _$$LoadDataEveryoneIsWatchingCopyWith(
+          _$LoadDataEveryoneIsWatching value,
+          $Res Function(_$LoadDataEveryoneIsWatching) then) =
+      __$$LoadDataEveryoneIsWatchingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadDataEveryoneIsWatchingCopyWithImpl<$Res>
+class __$$LoadDataEveryoneIsWatchingCopyWithImpl<$Res>
     extends _$HotandnewEventCopyWithImpl<$Res>
-    implements $LoadDataEveryoneIsWatchingCopyWith<$Res> {
-  _$LoadDataEveryoneIsWatchingCopyWithImpl(LoadDataEveryoneIsWatching _value,
-      $Res Function(LoadDataEveryoneIsWatching) _then)
-      : super(_value, (v) => _then(v as LoadDataEveryoneIsWatching));
+    implements _$$LoadDataEveryoneIsWatchingCopyWith<$Res> {
+  __$$LoadDataEveryoneIsWatchingCopyWithImpl(
+      _$LoadDataEveryoneIsWatching _value,
+      $Res Function(_$LoadDataEveryoneIsWatching) _then)
+      : super(_value, (v) => _then(v as _$LoadDataEveryoneIsWatching));
 
   @override
-  LoadDataEveryoneIsWatching get _value =>
-      super._value as LoadDataEveryoneIsWatching;
+  _$LoadDataEveryoneIsWatching get _value =>
+      super._value as _$LoadDataEveryoneIsWatching;
 }
 
 /// @nodoc
@@ -234,7 +220,7 @@ class _$LoadDataEveryoneIsWatching implements LoadDataEveryoneIsWatching {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is LoadDataEveryoneIsWatching);
+            other is _$LoadDataEveryoneIsWatching);
   }
 
   @override
@@ -311,27 +297,6 @@ abstract class LoadDataEveryoneIsWatching implements HotandnewEvent {
 }
 
 /// @nodoc
-class _$HotandnewStateTearOff {
-  const _$HotandnewStateTearOff();
-
-  _Initial call(
-      {required List<Results> comingSoonList,
-      required List<Results> everyOnesWatchingList,
-      required bool isLoading,
-      required bool hasError}) {
-    return _Initial(
-      comingSoonList: comingSoonList,
-      everyOnesWatchingList: everyOnesWatchingList,
-      isLoading: isLoading,
-      hasError: hasError,
-    );
-  }
-}
-
-/// @nodoc
-const $HotandnewState = _$HotandnewStateTearOff();
-
-/// @nodoc
 mixin _$HotandnewState {
   List<Results> get comingSoonList => throw _privateConstructorUsedError;
   List<Results> get everyOnesWatchingList => throw _privateConstructorUsedError;
@@ -393,10 +358,11 @@ class _$HotandnewStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$InitialCopyWith<$Res>
+abstract class _$$_InitialCopyWith<$Res>
     implements $HotandnewStateCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
   @override
   $Res call(
       {List<Results> comingSoonList,
@@ -406,13 +372,13 @@ abstract class _$InitialCopyWith<$Res>
 }
 
 /// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$HotandnewStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
+class __$$_InitialCopyWithImpl<$Res> extends _$HotandnewStateCopyWithImpl<$Res>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+      : super(_value, (v) => _then(v as _$_Initial));
 
   @override
-  _Initial get _value => super._value as _Initial;
+  _$_Initial get _value => super._value as _$_Initial;
 
   @override
   $Res call({
@@ -421,13 +387,13 @@ class __$InitialCopyWithImpl<$Res> extends _$HotandnewStateCopyWithImpl<$Res>
     Object? isLoading = freezed,
     Object? hasError = freezed,
   }) {
-    return _then(_Initial(
+    return _then(_$_Initial(
       comingSoonList: comingSoonList == freezed
-          ? _value.comingSoonList
+          ? _value._comingSoonList
           : comingSoonList // ignore: cast_nullable_to_non_nullable
               as List<Results>,
       everyOnesWatchingList: everyOnesWatchingList == freezed
-          ? _value.everyOnesWatchingList
+          ? _value._everyOnesWatchingList
           : everyOnesWatchingList // ignore: cast_nullable_to_non_nullable
               as List<Results>,
       isLoading: isLoading == freezed
@@ -446,15 +412,27 @@ class __$InitialCopyWithImpl<$Res> extends _$HotandnewStateCopyWithImpl<$Res>
 
 class _$_Initial implements _Initial {
   const _$_Initial(
-      {required this.comingSoonList,
-      required this.everyOnesWatchingList,
+      {required final List<Results> comingSoonList,
+      required final List<Results> everyOnesWatchingList,
       required this.isLoading,
-      required this.hasError});
+      required this.hasError})
+      : _comingSoonList = comingSoonList,
+        _everyOnesWatchingList = everyOnesWatchingList;
 
+  final List<Results> _comingSoonList;
   @override
-  final List<Results> comingSoonList;
+  List<Results> get comingSoonList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_comingSoonList);
+  }
+
+  final List<Results> _everyOnesWatchingList;
   @override
-  final List<Results> everyOnesWatchingList;
+  List<Results> get everyOnesWatchingList {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_everyOnesWatchingList);
+  }
+
   @override
   final bool isLoading;
   @override
@@ -469,11 +447,11 @@ class _$_Initial implements _Initial {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Initial &&
+            other is _$_Initial &&
             const DeepCollectionEquality()
-                .equals(other.comingSoonList, comingSoonList) &&
+                .equals(other._comingSoonList, _comingSoonList) &&
             const DeepCollectionEquality()
-                .equals(other.everyOnesWatchingList, everyOnesWatchingList) &&
+                .equals(other._everyOnesWatchingList, _everyOnesWatchingList) &&
             const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
             const DeepCollectionEquality().equals(other.hasError, hasError));
   }
@@ -481,23 +459,23 @@ class _$_Initial implements _Initial {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(comingSoonList),
-      const DeepCollectionEquality().hash(everyOnesWatchingList),
+      const DeepCollectionEquality().hash(_comingSoonList),
+      const DeepCollectionEquality().hash(_everyOnesWatchingList),
       const DeepCollectionEquality().hash(isLoading),
       const DeepCollectionEquality().hash(hasError));
 
   @JsonKey(ignore: true)
   @override
-  _$InitialCopyWith<_Initial> get copyWith =>
-      __$InitialCopyWithImpl<_Initial>(this, _$identity);
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
+      __$$_InitialCopyWithImpl<_$_Initial>(this, _$identity);
 }
 
 abstract class _Initial implements HotandnewState {
   const factory _Initial(
-      {required List<Results> comingSoonList,
-      required List<Results> everyOnesWatchingList,
-      required bool isLoading,
-      required bool hasError}) = _$_Initial;
+      {required final List<Results> comingSoonList,
+      required final List<Results> everyOnesWatchingList,
+      required final bool isLoading,
+      required final bool hasError}) = _$_Initial;
 
   @override
   List<Results> get comingSoonList;
@@ -509,6 +487,6 @@ abstract class _Initial implements HotandnewState {
   bool get hasError;
   @override
   @JsonKey(ignore: true)
-  _$InitialCopyWith<_Initial> get copyWith =>
+  _$$_InitialCopyWith<_$_Initial> get copyWith =>
       throw _privateConstructorUsedError;
 }
